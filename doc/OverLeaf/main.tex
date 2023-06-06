@@ -1,0 +1,72 @@
+\documentclass[12pt, a4paper, twoside]{article}
+
+%% Preamble
+\usepackage{umatfgspanish}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\addbibresource{references.bib}
+
+
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+%% Cover
+\includepdf[noautoscale=true, width=\paperwidth]{pages/cover.pdf}
+
+%% Title
+\clearpage
+\setcounter{page}{1}
+
+\includepdf[noautoscale=true, width=\paperwidth]{pages/title.pdf}
+
+\newpage
+
+%% Abstract
+\subfile{sections/abstract-es}
+
+\newpage
+
+\subfile{sections/abstract-en}
+
+%% TOC
+\tableofcontents
+
+%% Sections
+\section{Introducción}
+\subfile{sections/introduction}
+
+\section{Conceptos}
+\subfile{sections/concepts}
+
+\section{Herramientas}
+\subfile{sections/tools}
+
+\section{Desarrollo}
+\subfile{sections/development}
+
+\section{Resultados}
+\subfile{sections/results}
+
+\section{Conclusiones}
+\subfile{sections/conclusions}
+
+%% Bibliography
+\nocite{*}
+\printbibliography
+
+\newpage
+
+%% Apendices
+\begin{umaappendices}
+\subfile{sections/appendix}
+
+\end{umaappendices}
+
+\newpage
+
+%% Back Cover
+\includepdf[noautoscale=true, width=\paperwidth]{pages/backcover.pdf}
+
+\end{document}

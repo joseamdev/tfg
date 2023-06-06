@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+%% begin abstract format
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{Abstract \\}%
+    \else %% <- here I've removed \small
+    \begin{flushright}
+        {\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Abstract\vspace{\z@}}%  %% <- here I've added the format
+        \end{flushright}
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+%% end abstract format
+
+\begin{abstract}
+
+Metadata provides structured information about the content of a document. This information does not always follow the same structure, is incomplete or completely missing. This is a problem when you want to classify, identify or locate a certain document. With techniques such as text mining, the task of extracting this metadata can be automated.
+
+This project provides the necessary tools to extract and generate metadata from unstructured documents. Text mining techniques are used to achieve this purpose. The document type will be scientific papers in English and PDF format. Some of the functionalities are: reading documents in PDF format; metadata analysis and extraction; exporting metadata.
+
+\bfseries{\large{Keywords:}} paper, pdf, metadata, text mining
+
+\end{abstract}
+
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+%% begin abstract format
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{Resumen \\}%
+    \else %% <- here I've removed \small
+    \begin{flushright}
+        {\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Resumen\vspace{\z@}}%  %% <- here I've added the format
+        \end{flushright}
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+%% end abstract format
+%% begin abstract format
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{Resumen \\}%
+    \else %% <- here I've removed \small
+    \begin{flushright}
+        {\filleft\Huge\bfseries\fontsize{48pt}{12}\selectfont Resumen\vspace{\z@}}%  %% <- here I've added the format
+        \end{flushright}
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+%% end abstract format
+\begin{abstract}
+
+Los metadatos aportan información estructurada sobre el contenido de un documento. Esta información no siempre sigue la misma estructura, se encuentra incompleta o es completamente inexistente. Esto supone un problema cuando se quiere clasificar, identificar o ubicar un determinado documento. Con técnicas como la minería de textos (Text Mining) se puede automatizar la tarea de extracción de estos metadatos.
+
+Este proyecto aporta las herramientas necesarias para extraer y generar metadatos de documentos no estructurados. Se emplean técnicas de minería de textos para conseguir dicho propósito. El tipo de documento serán artículos de investigación en inglés y formato PDF. Entre las funcionalidades están: lectura de documentos en formato PDF; análisis y extracción de metadatos; exportar metadatos.
+
+\bfseries{\large{Palabras clave:}} artículo, pdf, metadatos, text mining
+
+\end{abstract}
+\end{document}
+
+

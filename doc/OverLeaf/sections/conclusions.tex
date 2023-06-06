@@ -1,0 +1,25 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+Tras realizar el proyecto las conclusiones obtenidas han sido:
+
+El trabajo con librerías dedicadas al manejo de PDF. Se ha descubierto que no todas manejan los documentos de igual modo. Esto me ha servido para poder jugar con las dos seleccionadas para obtener la información que requería.
+
+Los metadatos no siempre se rellenan acorde a lo que se espera. Examinando las muestras se ha visto que no se suelen rellenar todos los campos. Y en algunos casos, se emplean las etiquetas equivocadas.
+
+Los artículos siguen un esquema muy similar, salvo excepciones. Esto facilita la extracción de información. Se han podido conseguir resultados desde el primer momento gracias a esto.
+
+El procesamiento de lenguaje natural ha resultado muy útil para obtener términos frecuentes. Gracias al proyecto, he conocido cómo se preparan los textos y se trabaja con la librería nltk de Python.
+
+Otro aspecto fundamental, es ver la importancia de usar un esquema como Dublin Core. El hecho de usar un sistema estandarizado de metainformación es una ventaja para trasladar estos datos entre sistemas.
+
+\subsection{Líneas futuras}
+
+Este trabajo podría complementarse por dos vías: rendimiento y eficiencia.
+
+El rendimiento se puede mejorar utilizando multiproceso. Los diferentes cálculos que se realizan con cada PDF consumen mucho tiempo. Habría que estudiar que métodos serían convenientes para lanzar varios análisis de artículos a la vez.
+
+La eficiencia se puede mejorar utilizando técnicas más nuevas dentro de la inteligencia articial. El año 2017, con la publicación del artículo «Attention Is All You Need», trajo un nuevo modelo de redes neuronales, los Transformer. Estos se caracterizan por recordar todo el texto introducido, a diferencia de los modelos recursivos. Habría que estudiar si este nuevo modelo mejora los resultados obtenidos y compensa el coste de cálculo que supone usar una red neuronal.
+
+\end{document}
